@@ -11,6 +11,7 @@ class ChangePassword extends Component {
   constructor (props) {
     super(props)
 
+    // like signUp but oldPass and newPass state instead
     this.state = {
       oldPassword: '',
       newPassword: ''
@@ -24,8 +25,10 @@ class ChangePassword extends Component {
   onChangePassword = event => {
     event.preventDefault()
 
+    // imilar to signUp but accepts a user for an authenticated request
     const { msgAlert, history, user } = this.props
 
+    // pass the user to changePassword for the user's token
     changePassword(this.state, user)
       .then(() => msgAlert({
         heading: 'Change Password Success',

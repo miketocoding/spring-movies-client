@@ -1,3 +1,8 @@
+// exports an object with different messages to show the user
+// This is useful because:
+// 1. If we want to reuse between multiple comments, keeps DRY
+// 2. It groups together our messages so we can edit them all at once
+// 3. If we wanted different files for different languages (eng, spn, chi)
 export default {
   signUpSuccess: 'Succesfully registered! You\'ve been signed in as well.',
   signUpFailure: 'Registration failed. Email may be taken, or passwords don\'t match.',
